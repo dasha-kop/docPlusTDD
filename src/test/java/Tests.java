@@ -9,4 +9,10 @@ public class Tests {
     public void test(){
         System.out.println("Проверка");
     }
+
+    @Test
+    public void WelcomeTest(){
+        HeadHealth headHealth = new HeadHealth();
+        headHealth.welcome();
+    }
 }
