@@ -27,4 +27,10 @@ public class Tests {
         BackHealth backHealth = new BackHealth();
         backHealth.welcome();
     }
+
+    @Test
+    public void TherapistTest(){
+        Therapist therapist = new Therapist(new HeadHealth());
+        therapist.printQuestions();
+    }
 }
