@@ -21,4 +21,10 @@ public class Tests {
         HeadHealth headHealth = new HeadHealth();
         headHealth.printQuestions();
     }
+
+    @Test
+    public void WelcomeBackTest(){
+        BackHealth backHealth = new BackHealth();
+        backHealth.welcome();
+    }
 }
