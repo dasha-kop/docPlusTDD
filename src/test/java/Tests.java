@@ -19,7 +19,9 @@ public class Tests {
     @Test
     public void QuestionHeadTest(){
         HeadHealth headHealth = new HeadHealth();
+        BackHealth backHealth = new BackHealth();
         headHealth.printQuestions();
+        backHealth.printQuestions();
     }
 
     @Test
