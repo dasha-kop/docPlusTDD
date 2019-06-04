@@ -13,13 +13,14 @@ public class BackHealth implements IVirtualDoctor {
     private final static String ISHIAZ = "Ишиас";
     @Override
     public void printTitle() {
-        System.out.println("Спина");
+        System.out.println("2) Спина");
     }
 
     public BackHealth() {
         questions = new ArrayList<>();
         questions.add(LOIN_PAIN);
         questions.add(STRESS_PAIN);
+        questions.add(PERIOD_PAIN);
         answers = new ArrayList<>();
         answers.add(ARTRITT);
         answers.add(ARTROZ);
@@ -37,6 +38,11 @@ public class BackHealth implements IVirtualDoctor {
 
     @Override
     public void diagnosis(int number) {
-        System.out.println(answers.get(number));
+        System.out.println("Поздравляем у вас " + answers.get(number));
+    }
+
+    @Override
+    public int countQuestions() {
+        return questions.size();
     }
 }

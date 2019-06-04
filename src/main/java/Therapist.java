@@ -9,4 +9,12 @@ public class Therapist {
         virtualDoctor.printQuestions();
     }
 
+    public int getCount(){
+        return virtualDoctor.countQuestions();
+    }
+
+    public void getAnswer(int num){
+        virtualDoctor.diagnosis(num);
+    }
+
 }

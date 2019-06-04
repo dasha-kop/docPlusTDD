@@ -10,4 +10,6 @@ public interface IVirtualDoctor {
 
     void diagnosis(int number);
 
+    int countQuestions();
+
 }

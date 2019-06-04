@@ -14,7 +14,7 @@ public class HeadHealth implements IVirtualDoctor {
     private final static String MIGREN = "Мигрень";
     @Override
     public void printTitle() {
-        System.out.println("Голова");
+        System.out.println("1) Голова");
     }
 
     public HeadHealth() {
@@ -39,6 +39,11 @@ public class HeadHealth implements IVirtualDoctor {
 
     @Override
     public void diagnosis(int number) {
-        System.out.println(answers.get(number));
+        System.out.println("Поздравляем у вас " + answers.get(number));
+    }
+
+    @Override
+    public int countQuestions() {
+        return questions.size();
     }
 }
