@@ -43,4 +43,12 @@ public class Tests {
         headHealth.printTitle();
         backHealth.printTitle();
     }
+
+    @Test void DiagnosesTest(){
+        HeadHealth headHealth = new HeadHealth();
+        BackHealth backHealth = new BackHealth();
+        headHealth.diagnosis(1);
+        backHealth.diagnosis(1);
+    }
+
 }
