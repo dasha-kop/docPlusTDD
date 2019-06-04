@@ -15,4 +15,10 @@ public class Tests {
         HeadHealth headHealth = new HeadHealth();
         headHealth.welcome();
     }
+
+    @Test
+    public void QuestionHeadTest(){
+        HeadHealth headHealth = new HeadHealth();
+        headHealth.printQuestions();
+    }
 }
