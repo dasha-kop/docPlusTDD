@@ -33,4 +33,12 @@ public class Tests {
         Therapist therapist = new Therapist(new HeadHealth());
         therapist.printQuestions();
     }
+
+    @Test
+    public void TitleTest(){
+        HeadHealth headHealth = new HeadHealth();
+        BackHealth backHealth = new BackHealth();
+        headHealth.printTitle();
+        backHealth.printTitle();
+    }
 }
