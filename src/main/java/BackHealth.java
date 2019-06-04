@@ -27,4 +27,9 @@ public class BackHealth implements IVirtualDoctor {
             System.out.println(i++ + PLUS_ONE + ") " + each);
         }
     }
+
+    @Override
+    public void diagnosis(int number) {
+
+    }
 }

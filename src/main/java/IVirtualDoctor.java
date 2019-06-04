@@ -1,10 +1,13 @@
 public interface IVirtualDoctor {
 
-    default void welcome(){
-        System.out.println("Здравствуйте, вас приветствует виртуальный доктор \"DocPlus\" ");
+    default void welcome() {
+        System.out.println("Здравствуйте, вас приветствует альфа версия ПО виртуальный доктор \"DocPlus\" ");
     }
 
-    public void printTitle();
-    public void printQuestions();
+    void printTitle();
+
+    void printQuestions();
+
+    void diagnosis(int number);
 
 }

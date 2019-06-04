@@ -8,4 +8,5 @@ public class Therapist {
     public void printQuestions(){
         virtualDoctor.printQuestions();
     }
+
 }
