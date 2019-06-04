@@ -4,6 +4,7 @@ public interface IVirtualDoctor {
         System.out.println("Здравствуйте, вас приветствует виртуальный доктор \"DocPlus\" ");
     }
 
+    public void printTitle();
     public void printQuestions();
 
 }
