@@ -37,8 +37,8 @@ public class BackHealth implements IVirtualDoctor {
     }
 
     @Override
-    public void diagnosis(int number) {
-        System.out.println("Поздравляем у вас " + answers.get(number));
+    public String diagnosis(int number) {
+        return  "Поздравляем у вас " + answers.get(number);
     }
 
     @Override

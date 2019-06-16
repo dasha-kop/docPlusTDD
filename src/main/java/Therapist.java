@@ -14,7 +14,10 @@ public class Therapist {
     }
 
     public void getAnswer(int num){
-        virtualDoctor.diagnosis(num);
+        System.out.println(virtualDoctor.diagnosis(num));
     }
 
+    public IVirtualDoctor getVirtualDoctor() {
+        return virtualDoctor;
+    }
 }

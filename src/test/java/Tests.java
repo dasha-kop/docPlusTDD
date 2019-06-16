@@ -1,6 +1,7 @@
 import org.junit.Test;
 import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4ClassRunner.class)
 public class Tests {
@@ -14,6 +15,7 @@ public class Tests {
     public void WelcomeTest(){
         HeadHealth headHealth = new HeadHealth();
         headHealth.welcome();
+        assertEquals(headHealth.countQuestions(), 3);
     }
 
     @Test
@@ -28,6 +30,7 @@ public class Tests {
     public void WelcomeBackTest(){
         BackHealth backHealth = new BackHealth();
         backHealth.welcome();
+        assertEquals(backHealth.countQuestions(), 3);
     }
 
     @Test
@@ -44,11 +47,22 @@ public class Tests {
         backHealth.printTitle();
     }
 
-    @Test void DiagnosesTest(){
+    @Test
+    public void DiagnosesTest(){
         HeadHealth headHealth = new HeadHealth();
         BackHealth backHealth = new BackHealth();
-        headHealth.diagnosis(1);
-        backHealth.diagnosis(1);
+        String headDiagnose = headHealth.diagnosis(1);
+        assertEquals(headDiagnose,"Поздравляем у вас Алкогольная энцефалопатия");
+        String backDiagnose = backHealth.diagnosis(1);
+        assertEquals(backDiagnose, "Поздравляем у вас Артроз позвоночника");
+    }
+
+    @Test
+    public void TherapistKindTest(){
+        Therapist therapist = new Therapist(new HeadHealth());
+        assertEquals(therapist.getVirtualDoctor().getClass(), HeadHealth.class);
+        therapist = new Therapist(new BackHealth());
+        assertEquals(therapist.getVirtualDoctor().getClass(), BackHealth.class);
     }
 
 }

@@ -8,7 +8,7 @@ public interface IVirtualDoctor {
 
     void printQuestions();
 
-    void diagnosis(int number);
+    String diagnosis(int number);
 
     int countQuestions();
 
